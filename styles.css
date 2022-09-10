@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: rgb(16, 90, 9);
+    --color2: rgb(27, 143, 23);
+    --color3: rgb(72, 240, 86);
+
+}
+
+html{
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 16px;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.first-page{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/main-bcg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
