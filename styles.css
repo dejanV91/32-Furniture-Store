@@ -8,6 +8,7 @@
     --color1: rgb(16, 90, 9);
     --color2: rgb(27, 143, 23);
     --color3: rgb(72, 240, 86);
+    --white: #fff;
 
 }
 
@@ -20,12 +21,93 @@ html{
 body{
     min-height: 100vh;
 }
-
+/* ===========
+FIRST PAGE
+============== */
 .first-page{
+    position: relative;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/main-bcg.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 0 70px;
 }
 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.nav-bar{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+}
+
+.nav-bar a:hover{
+    color: var(--color3);
+}
+
+.logo-div{
+    position: absolute;
+    left: 45%;
+}
+
+.cart-div{
+    position: relative;
+}
+
+#cart-icon{
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.number-cart-div{
+    top: -10px;
+    right: -10px;
+    position: absolute;
+    background-color: var(--color2);
+    color: var(--white);
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.hero{
+    position: absolute;
+    top: 50%;
+}
+
+.feature-div{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    font-family: "Kaushan script", cursive;
+    font-size: 4rem;
+    color: var(--white);
+    font-weight: 300;
+    margin-bottom: 20px;    
+    text-transform: capitalize;
+}
