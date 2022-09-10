@@ -105,7 +105,7 @@ FIRST PAGE
 
 .title{
     font-family: "Kaushan script", cursive;
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--white);
     font-weight: 300;
     margin-bottom: 10px;    
@@ -114,7 +114,7 @@ FIRST PAGE
 
 .subtitle{
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 200;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 30px;
@@ -135,4 +135,16 @@ FIRST PAGE
     cursor: pointer;
     background-color: var(--white);
     color: var(--color2);
+}
+
+@media (max-width: 1050px) {
+    .title{
+        font-size: 4rem;
+    }
+    .subtitle{
+        font-size: 1.5rem;
+    }
+    .logo-div{
+        left: 55%;
+    }
 }
