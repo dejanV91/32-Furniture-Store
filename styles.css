@@ -190,6 +190,7 @@ FIRST PAGE
     width: 100%;
     height: 100%;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .items-images{
@@ -224,5 +225,31 @@ FIRST PAGE
 .all-products-button:hover{
     color: black;
     background-color: var(--color3);
+    cursor: pointer;
+}
+
+.products-icons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transform: translate(-50%, -50%);
+}
+
+.function-icon{
+    transition: all 0.3s linear;
+    background-color: var(--color1);
+    margin-right: 10px;
+    padding: 8px;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.function-icon:hover{
+    background-color: var(--color2);
     cursor: pointer;
 }
