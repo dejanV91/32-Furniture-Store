@@ -200,6 +200,10 @@ FIRST PAGE
     border-radius: 5px;
 }
 
+.items-images:hover + div{
+    visibility: visible;
+}
+
 .item-title{
     color: gray;
     margin-bottom: 5px;
@@ -235,6 +239,11 @@ FIRST PAGE
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.products-icons:hover {
+    visibility: visible;
 }
 
 .function-icon{
@@ -252,4 +261,5 @@ FIRST PAGE
 .function-icon:hover{
     background-color: var(--color2);
     cursor: pointer;
+    color: var(--white);
 }
