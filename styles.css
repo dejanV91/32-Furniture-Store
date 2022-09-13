@@ -54,6 +54,7 @@ FIRST PAGE
     letter-spacing: 2px;
     text-transform: capitalize;
     transition: all 0.3s linear;
+    text-align: center;
 }
 
 .nav-bar a:hover{
@@ -200,10 +201,6 @@ FIRST PAGE
     border-radius: 5px;
 }
 
-.items-images:hover + div{
-    visibility: visible;
-}
-
 .item-title{
     color: gray;
     margin-bottom: 5px;
@@ -234,28 +231,30 @@ FIRST PAGE
 
 .products-icons{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    transform: translate(-50%, -50%);
-    visibility: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s linear;
 }
 
 .products-icons:hover {
-    visibility: visible;
+    opacity: 1;
 }
 
 .function-icon{
     transition: all 0.3s linear;
     background-color: var(--color1);
-    margin-right: 10px;
+    width: 40px;
+    height: 40px;
     padding: 8px;
     color: var(--white);
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-right: 10px;
 }
 
 .function-icon:hover{
