@@ -287,13 +287,11 @@ FIRST PAGE
     transition: all 0.3s linear;
     background-color: rgba(2, 2, 2, 0.473);
     padding: 20px 30px;
-    z-index: 0;
+    z-index: -1;
     opacity: 0;
-    display: none;
 }
 
-.show{
-    display: block;
+.modal.show{
     z-index: 10;
     opacity: 1;
 }
@@ -351,9 +349,6 @@ FIRST PAGE
     font-size: 2rem;
     margin-right: 20px;
 }
-
-
-
 
 /*============
 ===== MEDIA 

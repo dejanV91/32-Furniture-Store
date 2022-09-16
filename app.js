@@ -9,4 +9,9 @@ const singleProductUrl =
   toggleBtn.addEventListener("click", () => {
     const modal = document.querySelector(".modal");
     modal.classList.add("show");
+
+    const closeModal = document.querySelector(".modal-close");
+    closeModal.addEventListener("click", () => {
+      modal.classList.remove("show");
+    })
   });
