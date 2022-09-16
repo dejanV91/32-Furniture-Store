@@ -287,7 +287,15 @@ FIRST PAGE
     transition: all 0.3s linear;
     background-color: rgba(2, 2, 2, 0.473);
     padding: 20px 30px;
+    z-index: 0;
+    opacity: 0;
+    display: none;
+}
+
+.show{
+    display: block;
     z-index: 10;
+    opacity: 1;
 }
 
 .modal-content{
@@ -328,7 +336,22 @@ FIRST PAGE
 .list-modal a{
     text-decoration: none;
     color: rgb(95, 95, 95);
+    font-size: 2rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    width: fit-content;
 }
+
+.list-modal a:hover{
+    cursor: pointer;
+}
+
+.list-modal a span{
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
 
 
 
