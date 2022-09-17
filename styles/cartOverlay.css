@@ -39,6 +39,8 @@
 
 .content-cart{
     text-align: center;
+    padding: 20px;
+    height: 100%;
 }
 
 .content-cart h2{
@@ -47,6 +49,33 @@
 }
 
 .cart-items{
-    height: 300px;
+    height: 60%;
     width: 100%;
+}
+
+.total-price{
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+.price{
+    font-size: 2rem;
+}
+
+.checkout{
+    background-color: rgb(3, 121, 19);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: white;
+    padding: 5px 70px;
+    border: none;
+    border-radius: 7px;
+    transition: all .3s linear;
+}
+
+.checkout:hover{
+    cursor: pointer;
+    color: rgb(34, 34, 34);
+    background-color: rgb(39, 218, 62);
 }
