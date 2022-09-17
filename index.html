@@ -6,12 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniture Store</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/cartOverlay.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- CART overlay -->
+    <div class="cart-overlay">
+        <aside class="cart-modal">
+            <div class="close">
+                <span id="close-modal-cart" class="material-symbols-outlined">close</span>
+            </div>
+            <div class="content-cart">
+                <h2>your bag</h2>
+                <div class="cart-items">
+
+                </div>
+                <div class="total-price"></div>
+                <button class="checkout">checkout</button>
+            </div>
+        </aside>
+    </div>
+    <!-- cart overlay end -->
 
     <!-- FIRST -->
     <div class="first-page">

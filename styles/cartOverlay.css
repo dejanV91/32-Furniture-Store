@@ -1,0 +1,21 @@
+.cart-overlay{
+    background-color: rgba(0, 0, 0, 0.253);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 20;
+}
+
+.cart-modal{
+    background-color: rgb(199, 198, 198);
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 350px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.cart-modal .show{
+    transform: translateX(0);
+}
