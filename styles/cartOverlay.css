@@ -4,10 +4,13 @@
     height: 100vh;
     position: fixed;
     z-index: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
 }
 
 .cart-overlay.show{
     z-index: 20;
+    opacity: 1;
 }
 
 .cart-modal{
@@ -22,4 +25,28 @@
 
 .cart-modal.show{
     transform: translateX(0);
+}
+
+.close{
+    padding: 10px;
+}
+
+#close-modal-cart{
+    font-size: 3rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.content-cart{
+    text-align: center;
+}
+
+.content-cart h2{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.cart-items{
+    height: 300px;
+    width: 100%;
 }

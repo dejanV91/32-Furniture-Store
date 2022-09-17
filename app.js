@@ -22,6 +22,12 @@ cartIcon.addEventListener("click", () => {
   const cartOverlay = document.querySelector(".cart-overlay");
   cartModal.classList.add("show");
   cartOverlay.classList.add("show");
+
+  const closeModalCart = document.querySelector("#close-modal-cart");
+  closeModalCart.addEventListener("click", () => {
+      cartModal.classList.remove("show");
+      cartOverlay.classList.remove("show");
+  });
 });
 
   
