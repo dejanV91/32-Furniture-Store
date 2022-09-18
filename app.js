@@ -4,11 +4,10 @@ const allProductsUrl = 'https://course-api.com/javascript-store-products'
 const singleProductUrl =
   'https://course-api.com/javascript-store-single-product'
 
-import fetchProducts from "./utils/fetchIndex.js";
+import products from "./utils/setProductsIndex.js";
 
 const toggleBtn = document.querySelector(".toggle");
 const cartIcon = document.querySelector(".cart-div");
-const itemsDiv = document.querySelector(".items-div");
 
 toggleBtn.addEventListener("click", () => {
   const modal = document.querySelector(".modal");
@@ -33,33 +32,7 @@ cartIcon.addEventListener("click", () => {
   });
 });
 
-// set product on index page
-const products = async () => {
-  const items = await fetchProducts();
-  const setItem = items.slice(0,3)
-    .map((item) => {
-      const{name,price,} = item.fields;
-      let image = item.fields.image[0].url
-      return `<div class="single-item">
-                  <div class="image">
-                      <img class="items-images" src="${image}" alt="${name}">
-                      <div class="products-icons">
-                          <div id="search-icon" class="function-icon">
-                              <span class="material-symbols-outlined">search</span>
-                          </div>
-                          <div id="shopping-icon" class="function-icon">
-                              <span class="material-symbols-outlined">shopping_cart</span>
-                          </div>
-                      </div>
-                  </div>
-                  <h3 class="item-title">${name}</h3>
-                  <p class="price">$${price/100}</p>
-              </div>`
-    }).join("");
-  itemsDiv.innerHTML = setItem;
-}
-
-// call function
+// call function to set products on index page 
 products();
 
 
