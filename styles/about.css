@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: rgb(16, 90, 9);
+    --color2: rgb(27, 143, 23);
+    --color3: rgb(72, 240, 86);
+    --white: #fff;
+
+}
+
+html{
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 16px;
+}
+
+body{
+    min-height: 100vh;
+}
+
+/* ===========
+FIRST PAGE
+============== */
+.first-page{
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/main-bcg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 70px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.nav-bar{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.toggle{
+    background-color: var(--color2);
+    color: var(--white);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 17px;
+    border-radius: 30px;
+    transition: all 0.3s linear;
+}
+
+.toggle span{
+    font-size: 2rem;
+}
+
+.toggle:hover{
+    cursor: pointer;
+    background-color: var(--color1);
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    text-align: center;
+}
+
+.nav-bar a:hover{
+    color: var(--color3);
+}
+
+.logo-div{
+    position: absolute;
+    left: 45%;
+}
+
+.cart-div{
+    position: relative;
+    cursor: pointer;
+}
+
+#cart-icon{
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.number-cart-div{
+    top: -10px;
+    right: -10px;
+    position: absolute;
+    background-color: var(--color2);
+    color: var(--white);
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.hero{
+    position: absolute;
+    top: 35%;
+}
+
+.feature-div{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    font-family: "Kaushan script", cursive;
+    font-size: 5rem;
+    color: var(--white);
+    font-weight: 300;
+    margin-bottom: 10px;    
+    text-transform: capitalize;
+}
+
+.subtitle{
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 200;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 30px;
+}
+
+.btn{
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    background: transparent;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: all 0.3s linear;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--color2);
+}
