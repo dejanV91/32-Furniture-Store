@@ -217,6 +217,8 @@ FIRST PAGE
 .item-title{
     color: gray;
     margin-bottom: 5px;
+    font-size: 1rem;
+    text-transform: capitalize;
 }
 
 .price{
