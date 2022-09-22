@@ -8,6 +8,15 @@ export function getElement(className){
     }
 }
 
+// loading Hide
+export function loadingToggleHidde(element,className){
+    return element.classList.add(className)
+}
+// loading show
+export function loadingToggleShow(element,className){
+    return element.classList.remove(className)
+}
+
 //TOGGLE function
 export function toggleElement(elementBtn,element,closeElement,classShow){
     elementBtn.addEventListener("click", () =>{
@@ -41,5 +50,7 @@ export function cartModalToggle(cartIconElem,classShow){
 export default {
     getElement, 
     toggleElement,
-    cartModalToggle
+    cartModalToggle,
+    loadingToggleHidde,
+    loadingToggleShow
 };

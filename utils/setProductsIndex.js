@@ -1,9 +1,14 @@
 import fetchProducts from "./fetchIndex.js";
+import { getElement, loadingToggleHidde, loadingToggleShow} from "./functions.js";
 
 const itemsDiv = document.querySelector(".items-div");
+const loading = getElement(".loading");
 
 // set product on index page
 const products = async () => {
+    if(loading.classList.contains("hide")){
+        loadingToggleShow(loading, "hide");
+    }else{
     const items = await fetchProducts();
     const setItem = items.slice(0,3)
       .map((item) => {
@@ -25,7 +30,9 @@ const products = async () => {
                     <p class="price">$${price/100}</p>
                 </div>`
       }).join("");
+    loadingToggleHidde(loading,"hide");
     itemsDiv.innerHTML = setItem;
+    }
   }
 
   export default products
