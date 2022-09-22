@@ -136,6 +136,44 @@ HERO
     color: rgb(132, 132, 187);
 }
 
+/* ==========
+ABOUT CONTENT
+============= */
+
+.our-history{
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.hero-content{
+    padding: 0 30px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero-content h2{
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    color: rgb(53, 53, 53);
+}
+
+.hero-content h2 span{
+    color: var(--color2);
+    margin-right: 15px;
+}
+
+.text{
+    text-align: left;
+    font-size: 1.1rem;
+    color: rgb(164, 164, 164);
+    line-height: 30px;
+}
+
+
+
 /* =========== */
 /* MODAL */
 /* =========== */
