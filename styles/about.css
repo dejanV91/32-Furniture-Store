@@ -31,7 +31,6 @@ FIRST PAGE
     position: relative;
     height: 100vh;
     background-color: var(--white);
-    padding: 0 70px;
 }
 
 .header{
@@ -39,6 +38,7 @@ FIRST PAGE
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    padding: 0 70px;
 }
 
 .nav-bar{
@@ -113,6 +113,27 @@ FIRST PAGE
 #cart{
     font-weight: 600;
     font-size: 1.2rem;
+}
+
+/* ===========
+HERO
+============== */
+
+.page-hero{
+    background-color: rgb(232, 232, 247);
+    height: 130px;
+    display: flex;
+    align-items: center;
+}
+
+.title-hero{
+    padding-left: 100px;
+}
+
+.title-hero h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6rem;
+    color: rgb(132, 132, 187);
 }
 
 /* =========== */
@@ -196,12 +217,6 @@ FIRST PAGE
 ===============*/
 
 @media (max-width: 1050px) {
-    /* .title{
-        font-size: 4rem;
-    }
-    .subtitle{
-        font-size: 1.5rem;
-    } */
     .logo-div{
         left: 55%;
     }
@@ -233,20 +248,17 @@ FIRST PAGE
         position: relative;
         left: 0;
     }
-    .first-page{
+    .header{
         padding: 0 15px;
     }
 }
 
-@media (max-width: 350px) {
-    .title{
-        font-size: 2rem;
+@media (max-width: 450px) {
+    .header{
+        padding: 0 20px;
     }
-    .subtitle{
-        font-size: 1rem;
-    }
-    .btn{
-        padding: 7px 12px;
+    .title-hero{
+        padding-left: 20px;
     }
 }
 
