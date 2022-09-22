@@ -6,8 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="../styles/about.css">
+    <link rel="stylesheet" href="../styles/cartOverlay.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- CART overlay -->
+    <div class="cart-overlay">
+        <aside class="cart-modal">
+            <div class="close">
+                <span id="close-modal-cart" class="material-symbols-outlined">close</span>
+            </div>
+            <div class="content-cart">
+                <h2>your bag</h2>
+                <div class="cart-items">
+                    <!-- single item -->
+                    <div class="item">
+                        <div class="image-item-div">
+                            <img src="./img/6d92321b.jpg" alt="">
+                        </div>
+                        <div class="content-item-div">
+                            <h3 class="item-title">utopi sofa</h3>
+                            <p class="item-price"><span>$</span>39.95</p>
+                            <button class="remove-item">remove</button>
+                        </div>
+                        <div class="number-item-div">
+                            <button class="plus-item item-btn">
+                                <span class="material-symbols-outlined">expand_less</span>
+                            </button>
+                            <p class="number">0</p>
+                            <button class="minus-item item-btn">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- end single item -->
+                </div>
+                <div class="total-price">total: $<span class="price">0.00</span></div>
+                <button class="checkout">checkout</button>
+            </div>
+        </aside>
+    </div>
+    <!-- cart overlay end -->
+
     <!-- FIRST -->
     <div class="first-page">
         <!-- header -->
@@ -25,7 +69,7 @@
             <!-- end toggle nav -->
 
             <div class="logo-div">
-                <img src="./img/logo-white.svg" alt="logo">
+                <img src="../img/logo-black.svg" alt="logo">
             </div>
             <div class="cart-div">
                 <span id="cart-icon" class="material-symbols-outlined">shopping_cart</span>
@@ -55,11 +99,7 @@
 
         <!-- hero -->
         <article class="hero">
-            <h1 class="title">rest, relax, unwind</h1>
-            <h2 class="subtitle">Embrace your choices - we do</h2>
-            <div class="button-div">
-                <button class="btn">show now</button>
-            </div>
+            
         </article>
         <!-- end hero -->
     </div>
