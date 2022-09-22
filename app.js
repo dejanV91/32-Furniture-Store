@@ -4,33 +4,21 @@ const allProductsUrl = 'https://course-api.com/javascript-store-products'
 const singleProductUrl =
   'https://course-api.com/javascript-store-single-product'
 
+// IMPORTS
 import products from "./utils/setProductsIndex.js";
+import { cartModalToggle, getElement, toggleElement } from "./utils/functions.js";
 
-const toggleBtn = document.querySelector(".toggle");
-const cartIcon = document.querySelector(".cart-div");
+// CONSTANTS
+const toggleBtn = getElement(".toggle");
+const cartIcon = getElement(".cart-div");
 
-toggleBtn.addEventListener("click", () => {
-  const modal = document.querySelector(".modal");
-  modal.classList.add("show");
+// FUNCTIONS
+// nav bar toggle
+toggleElement(toggleBtn,getElement(".modal"),
+                getElement(".modal-close"),"show")
 
-  const closeModal = document.querySelector(".modal-close");
-  closeModal.addEventListener("click", () => {
-    modal.classList.remove("show");
-  })
-});
-
-cartIcon.addEventListener("click", () => {
-  const cartModal = document.querySelector(".cart-modal");
-  const cartOverlay = document.querySelector(".cart-overlay");
-  cartModal.classList.add("show");
-  cartOverlay.classList.add("show");
-
-  const closeModalCart = document.querySelector("#close-modal-cart");
-  closeModalCart.addEventListener("click", () => {
-      cartModal.classList.remove("show");
-      cartOverlay.classList.remove("show");
-  });
-});
+// toggle cart modal
+cartModalToggle(cartIcon,"show");
 
 // call function to set products on index page 
 products();
