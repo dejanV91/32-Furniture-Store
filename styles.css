@@ -262,12 +262,6 @@ FIRST PAGE
     transition: all 0.3s linear;
 }
 
-.all-products-button:hover{
-    color: black;
-    background-color: var(--color3);
-    cursor: pointer;
-}
-
 .products-icons{
     position: absolute;
     top: 0;
@@ -301,6 +295,13 @@ FIRST PAGE
     cursor: pointer;
     color: var(--white);
 }
+
+.all-products-button:hover{
+    color: black;
+    background-color: var(--color3);
+    cursor: pointer;
+}
+
 /* =========== */
 /* MODAL */
 /* =========== */

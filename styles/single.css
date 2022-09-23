@@ -22,34 +22,12 @@ body{
     min-height: 100vh;
 }
 
-
-
 /* ===========
 FIRST PAGE
 ============== */
-
-.loading{
-    position: absolute;
-    background-color: var(--white);
-    color: var(--color1);
-    z-index: 30;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding-top: 100px;
-}
-
-.loading h2{
-    font-size: 3rem;
-}
-
-.hide{
-    display: none;
-}
-
 .first-page{
     position: relative;
-    height: fit-content;
+    height: 100vh;
     background-color: var(--white);
 }
 
@@ -156,145 +134,6 @@ HERO
     color: rgb(132, 132, 187);
 }
 
-/* ========== 
-SECOND 
-=============*/
-
-.second-page{
-    padding: 60px 40px;
-    display: grid;
-    grid-template-columns: 200px auto;
-}
-
-.search-form{
-    margin-bottom: 20px;
-}
-
-.input-text{
-    width: 100%;
-    height: 2.2rem;
-    padding-left: 10px;
-    background-color: rgb(244, 244, 255);
-    letter-spacing: 2px;
-    border: none;
-}
-
-.companies-div h3{
-    color: rgb(41, 41, 41);
-    margin-bottom: 10px;
-}
-
-.companies{
-    margin-bottom: 10px;
-}
-
-.companies li{
-    list-style: none;
-    padding-left: 10px;
-    margin-bottom: 10px;
-    color: gray;
-}
-
-.companies li:hover{
-    cursor: pointer;
-}
-
-.price-div{
-    padding-top: 20px;
-}
-
-.title-price{
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-}
-
-.price-form{
-    margin-bottom: 5px;
-}
-
-.value-filter{
-    color: gray;
-    font-size: 1.2rem;
-}
-
-/* ============
-PRODUCTS LIST
-============ */
-
-.items-div{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    width: 90%;
-    margin-bottom: 30px;
-    padding: 0 20px;
-}
-
-.single-item{
-    text-align: center;
-}
-
-.image{
-    width: 100%;
-    height: 200px;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.items-images{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.item-title{
-    color: gray;
-    margin-bottom: 5px;
-    font-size: 1rem;
-    text-transform: capitalize;
-}
-
-.price{
-    font-weight: 900;
-    font-size: 1.2rem;
-    color: rgb(53, 53, 53);
-}
-
-.products-icons{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s linear;
-}
-
-.products-icons:hover {
-    opacity: 1;
-}
-
-.function-icon{
-    transition: all 0.3s linear;
-    background-color: var(--color1);
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    color: var(--white);
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.function-icon:hover{
-    background-color: var(--color2);
-    cursor: pointer;
-    color: var(--white);
-}
-
 /* =========== */
 /* MODAL */
 /* =========== */
@@ -381,7 +220,7 @@ PRODUCTS LIST
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1150px) {
     .items-div{
         grid-template-columns: 1fr 1fr;
     }
@@ -409,20 +248,6 @@ PRODUCTS LIST
     }
     .header{
         padding: 0 15px;
-    }
-    .image{
-        max-height: 130px;
-    }
-}
-
-@media (max-width: 650px) {
-    .second-page{
-        grid-template-columns: 1fr;
-    }
-    
-    .filter-div{
-        max-width: 200px;
-        margin-bottom: 40px;
     }
 }
 
