@@ -33,8 +33,8 @@ const products = async () => {
                     <p class="price">$${price/100}</p>
                 </div>`
       }).join("");
-    loadingToggleHidde(loading,"hide");
-    itemsDiv.innerHTML = setItem;
+      itemsDiv.innerHTML = setItem;
+      loadingToggleHidde(loading,"hide");
     }
   }
 

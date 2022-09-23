@@ -30,6 +30,8 @@ FIRST PAGE
 
 .loading{
     position: absolute;
+    left: 0;
+    top: 0;
     background-color: var(--white);
     color: var(--color1);
     z-index: 30;
