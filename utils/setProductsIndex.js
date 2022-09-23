@@ -18,9 +18,11 @@ const products = async () => {
                     <div class="image">
                         <img class="items-images" src="${image}" alt="${name}">
                         <div class="products-icons">
-                            <div id="search-icon" class="function-icon">
-                                <span class="material-symbols-outlined">search</span>
-                            </div>
+                            <a href="../pages/singleProduct.html">
+                                <div id="search-icon" class="function-icon">
+                                    <span class="material-symbols-outlined">search</span>
+                                </div>
+                            </a>
                             <div id="shopping-icon" class="function-icon">
                                 <span class="material-symbols-outlined">shopping_cart</span>
                             </div>
