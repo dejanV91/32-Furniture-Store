@@ -12,9 +12,10 @@ const products = async () => {
     const items = await fetchProducts();
     const setItem = items.slice(0,3)
       .map((item) => {
-        const{name,price,} = item.fields;
+        const {id} = item;
+        const{name,price} = item.fields;
         let image = item.fields.image[0].url
-        return `<div class="single-item">
+        return `<div data-id="${id}" class="single-item">
                     <div class="image">
                         <img class="items-images" src="${image}" alt="${name}">
                         <div class="products-icons">
@@ -37,4 +38,8 @@ const products = async () => {
     }
   }
 
-  export default products
+  
+
+
+
+export default products

@@ -1,5 +1,6 @@
 // IMPORTS
 import { cartModalToggle, getElement, toggleElement } from "./utils/functions.js";
+import allProductsFatch from "./utils/setAllProducts.js"
 
 // CONSTANTS
 const toggleBtn = getElement(".toggle");
@@ -12,3 +13,5 @@ toggleElement(toggleBtn,getElement(".modal"),
 
 // toggle cart modal
 cartModalToggle(cartIcon,"show");
+
+allProductsFatch();
