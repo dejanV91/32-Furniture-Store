@@ -6,10 +6,11 @@ const cartTotalDOM = getElement('.price');
 
 let cart = getStorageItem('cart');
 
-const addToCart = (id) => {
+export const addToCart = (id) => {
     let item = cart.find((cartItem) => cartItem.id === id);
 
-    console.log(item);
+    if (!item) {
+        let product
+    }
 }
 
-addToCart;

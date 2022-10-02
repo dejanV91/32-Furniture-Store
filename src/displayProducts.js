@@ -12,7 +12,7 @@ const display = (products,element, filters) => {
                                 <a href="singleProduct.html?id=${id}"><div class="function-icon search-icon">
                                     <span class="material-symbols-outlined">search</span>
                                 </div></a>
-                                <div data-id="${id}" onclick="addToCart(${id})" class="function-icon shopping-icon">
+                                <div data-id="${id}" class="function-icon shopping-icon">
                                     <span class="material-symbols-outlined">shopping_cart</span>
                                 </div>
                             </div>
@@ -24,6 +24,14 @@ const display = (products,element, filters) => {
         .join("");
     
     if (filters) return;
+
+    element.addEventListener('click', function (e) {
+        console.log(e);
+        const parent = e.target.parentElement;
+        if (parent.classList.contains('product-cart-btn')) {
+          addToCart(parent.dataset.id);
+        }
+      });
 
 }
 
