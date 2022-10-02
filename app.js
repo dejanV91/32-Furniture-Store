@@ -1,27 +1,18 @@
-const allProductsUrl = 'https://course-api.com/javascript-store-products'
-// temporary single product
-// 'https://course-api.com/javascript-store-single-product?id=rec43w3ipXvP28vog'
-const singleProductUrl =
-  'https://course-api.com/javascript-store-single-product'
+import fetchProducts from "./src/fetchProducts.js";
+import { setupStore } from "./src/store.js";
 
-// IMPORTS
-import products from "./utils/setProductsIndex.js";
-import { cartModalToggle, getElement, toggleElement } from "./utils/functions.js";
+const init = async () => {
+  const products = await fetchProducts();
+  if (products) {
+    // add products to the store
+    setupStore(products);
+    
+  }
+}
 
-// CONSTANTS
-const toggleBtn = getElement(".toggle");
-const cartIcon = getElement(".cart-div");
 
-// FUNCTIONS
-// nav bar toggle
-toggleElement(toggleBtn,getElement(".modal"),
-                getElement(".modal-close"),"show")
 
-// toggle cart modal
-cartModalToggle(cartIcon,"show");
 
-// call function to set products on index page 
-products();
 
 
 
