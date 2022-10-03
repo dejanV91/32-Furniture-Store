@@ -1,142 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furniture Store</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./styles/cartOverlay.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- CART overlay -->
-    <div class="cart-overlay">
-        <aside class="cart-modal">
-            <div class="close">
-                <span id="close-modal-cart" class="material-symbols-outlined">close</span>
-            </div>
-            <div class="content-cart">
-                <h2>your bag</h2>
-                <div class="cart-items">
-                    <!-- single item -->
-                    <!-- <div class="item"> -->
-                        <!-- <div class="image-item-div">
-                            <img src="./img/6d92321b.jpg" alt="">
-                        </div>
-                        <div class="content-item-div">
-                            <h3 class="item-title">utopi sofa</h3>
-                            <p class="item-price"><span>$</span>39.95</p>
-                            <button class="remove-item">remove</button>
-                        </div>
-                        <div class="number-item-div">
-                            <button class="plus-item item-btn">
-                                <span class="material-symbols-outlined">expand_less</span>
-                            </button>
-                            <p class="number">0</p>
-                            <button class="minus-item item-btn">
-                                <span class="material-symbols-outlined">expand_more</span>
-                            </button>
-                        </div> -->
-                    <!-- </div> -->
-                    <!-- end single item -->
-                </div>
-                <div class="total-price">total: $<span class="price">0.00</span></div>
-                <button class="checkout">checkout</button>
-            </div>
-        </aside>
-    </div>
-    <!-- cart overlay end -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
 
-    <!-- FIRST -->
-    <div class="first-page">
-        <!-- header -->
-        <header class="header">
-            <nav class="nav-bar">
-                <a href="index.html" id="home">home</a>
-                <a href="./pages/products.html" id="products">products</a>
-                <a href="./pages/about.html" id="about">about</a>
-            </nav>
-
-            <!-- toggle nav -->
-            <div class="toggle">
-                <span class="material-symbols-outlined">menu</span>
-            </div>
-            <!-- end toggle nav -->
-
-            <div class="logo-div">
-                <img src="./img/logo-white.svg" alt="logo">
-            </div>
-            <div class="cart-div">
-                <span id="cart-icon" class="material-symbols-outlined">shopping_cart</span>
-                <div class="number-cart-div">
-                    <p id="cart">3</p>
-                </div>
-            </div>
-        </header>
-        <!-- end header -->
-
-        <!-- modal hidden -->
-        <article class="modal">
-            <div class="modal-content">
-                <div class="button-modal">
-                    <button class="modal-close">
-                        <span id="close-modal" class="material-symbols-outlined">close</span>
-                    </button>
-                </div>
-                <div class="list-modal">
-                    <a href="index.html"><span class="material-symbols-outlined">home</span>home</a>
-                    <a href="./pages/products.html"><span class="material-symbols-outlined">bed</span>products</a>
-                    <a href="./pages/about.html"><span class="material-symbols-outlined">book</span>about</a>
-                </div>
-            </div>
-        </article>
-        <!-- end modal -->
-
-        <!-- hero -->
-        <article class="hero">
-            <h1 class="title">rest, relax, unwind</h1>
-            <h2 class="subtitle">Embrace your choices - we do</h2>
-            <div class="button-div">
-                <a href="./pages/products.html"><button class="btn">show now</button></a>
-            </div>
-        </article>
-        <!-- end hero -->
-    </div>
-
-    <!-- SECOND -->
-
-    <article class="feature-div">
-        <h2 class="featured-title">
-            <span>/</span>featured
-        </h2>
-        <div class="items-div">
-
-            <!-- single item -->
-            <!-- <div class="single-item">
-                <div class="image">
-                    <img class="items-images" src="./img/6d92321b.jpg" alt="">
-                    <div class="products-icons">
-                        <div id="search-icon" class="function-icon">
-                            <span class="material-symbols-outlined">search</span>
-                        </div>
-                        <div id="shopping-icon" class="function-icon">
-                            <span class="material-symbols-outlined">shopping_cart</span>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="item-title">high-back bench</h3>
-                <p class="price">$9.99</p>
-            </div> -->
-            <!-- end single item -->
-           
+    <!-- styles css -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Home | Comfy</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <!-- links -->
+        <div>
+          <button class="toggle-nav">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html" class="nav-link">
+                home
+              </a>
+            </li>
+            <li>
+              <a href="products.html" class="nav-link">
+                products
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="nav-link">
+                about
+              </a>
+            </li>
+          </ul>
         </div>
-        <a href="./pages/products.html"><button class="all-products-button">all products</button></a>
-    </article>
-
-    <script type="module" src="app.js"></script>
-</body>
+        <!-- logo -->
+        <img src="./images/logo-white.svg" class="nav-logo" alt="logo" />
+        <!-- cart icon -->
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <span class="cart-item-count">1</span>
+        </div>
+      </div>
+    </nav>
+    <!-- hero -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1 class="text-slanted">
+          rest, relax, unwind
+        </h1>
+        <h3>Embrace your choices - we do</h3>
+        <a href="products.html" class="hero-btn">
+          show now
+        </a>
+      </div>
+    </section>
+    <!-- sidebar -->
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <!-- close -->
+        <button class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <!-- links -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html" class="sidebar-link">
+              <i class="fas fa-home fa-fw"></i>
+              home
+            </a>
+          </li>
+          <li>
+            <a href="products.html" class="sidebar-link">
+              <i class="fas fa-couch fa-fw"></i>
+              products
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="sidebar-link">
+              <i class="fas fa-book fa-fw"></i>
+              about
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+    <!-- cart -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">your bag</h3>
+        </header>
+        <!-- cart items -->
+        <div class="cart-items"></div>
+        <!-- footer -->
+        <footer>
+          <h3 class="cart-total text-slanted">
+            total : $12.99
+          </h3>
+          <button class="cart-checkout btn">checkout</button>
+        </footer>
+      </aside>
+    </div>
+    <!-- featured products -->
+    <section class="section featured">
+      <div class="title">
+        <h2><span>/</span> featured</h2>
+      </div>
+      <div class="featured-center section-center">
+        <h2 class="section-loading">
+          loading...
+        </h2>
+        <!-- single product -->
+        <!-- <article class="product">
+          <div class="product-container">
+            <img src="./images/main-bcg.jpeg" class="product-img img" alt="" />
+           
+            <div class="product-icons">
+              <a href="product.html?id=1" class="product-icon">
+                <i class="fas fa-search"></i>
+              </a>
+              <button class="product-cart-btn product-icon" data-id="1">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <footer>
+            <p class="product-name">name</p>
+            <h4 class="product-price">$9.99</h4>
+          </footer>
+        </article> -->
+        <!-- end of single product -->
+      </div>
+      <a href="products.html" class="btn">
+        all products
+      </a>
+    </section>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
