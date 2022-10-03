@@ -1,4 +1,6 @@
+
 import { formatPrice } from "./utils.js";
+
 
 const display = (products,element, filters) => {
     // dislay products
@@ -26,8 +28,8 @@ const display = (products,element, filters) => {
     if (filters) return;
 
     element.addEventListener('click', function (e) {
-        console.log(e);
         const parent = e.target.parentElement;
+        addToCart(parent.dataset.id);
         if (parent.classList.contains('product-cart-btn')) {
           addToCart(parent.dataset.id);
         }
