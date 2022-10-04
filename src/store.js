@@ -14,6 +14,7 @@ const setupStore = (products) => {
   setStorageItem('store', store);
 };
 
+// find product by id from store in local storeg where is all products
 const findProduct = (id) => {
   let product = store.find((product) => product.id === id);
   return product;

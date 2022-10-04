@@ -14,22 +14,32 @@ const cartItemCountDOM = getElement('.cart-item-count');
 const cartItemsDOM = getElement('.cart-items');
 const cartTotalDOM = getElement('.cart-total');
 
+// set to local storage cart item
 let cart = getStorageItem('cart');
 
 export const addToCart = (id) => {
+  // find item from cart, if user has same item, save in variable
   let item = cart.find((cartItem) => cartItem.id === id);
 
+  // if same item no exist in cart then
   if (!item) {
+    // find item by id from local storage where are all products
     let product = findProduct(id);
-    // add item to the the
+    // add amount attribute in object product
     product = { ...product, amount: 1 };
+    // add another product in cart list
     cart = [...cart, product];
-    // add item to the DOM;
+    
+    // add item to the DOM cart;
     addToCartDOM(product);
+  // if same item EXIST in cart then
   } else {
     // update values
+    // increase amount in element(class = cart list) and amount in object 
     const amount = increaseAmount(id);
+    // set in variable list of all item's class ('.cart-item-amount')
     const items = [...cartItemsDOM.querySelectorAll('.cart-item-amount')];
+    // find item in cart with same id and add amount
     const newAmount = items.find((value) => value.dataset.id === id);
     newAmount.textContent = amount;
   }
@@ -43,6 +53,8 @@ export const addToCart = (id) => {
   //more stuff coming up
   openCart();
 };
+
+// display count on icon cart on index page
 function displayCartItemCount() {
   const amount = cart.reduce((total, cartItem) => {
     return (total += cartItem.amount);
@@ -51,8 +63,12 @@ function displayCartItemCount() {
 }
 function displayCartTotal() {
   let total = cart.reduce((total, cartItem) => {
+    console.log("FIRST: " + total);
+    console.log(cartItem);
     return (total += cartItem.price * cartItem.amount);
   }, 0);
+  console.log(cart); ////////////////////////////////////////////////////////////////////////////////reduce method and display cart total
+  console.log(total);
   cartTotalDOM.textContent = `Total : ${formatPrice(total)} `;
 }
 function displayCartItemsDOM() {
