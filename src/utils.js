@@ -15,6 +15,7 @@ const getElement = (selection) => {
   throw new Error(`Please check "${selection}" selector, no such element exist`)
 }
 
+// formats the price
 const formatPrice = (price) => {
   let formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -23,9 +24,11 @@ const formatPrice = (price) => {
   return formattedPrice
 }
 
+//get datas from local storage 
 const getStorageItem = (item) => {
   let storageItem = localStorage.getItem(item)
   if (storageItem) {
+    // converse to JS object
     storageItem = JSON.parse(localStorage.getItem(item))
   } else {
     storageItem = []

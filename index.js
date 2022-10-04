@@ -9,11 +9,14 @@ import display from './src/displayProducts.js';
 import { getElement } from './src/utils.js';
 
 const init = async () => {
+  // return data JS objects
   const products = await fetchProducts();
   if (products) {
-    // add products to the store
+    // add all products to the local storage (name is store)
     setupStore(products);
+    // variable with datas from local storage(store) which have data fetured
     const featured = store.filter((product) => product.featured === true);
+    // display product on indes.html (3 products)
     display(featured, getElement('.featured-center'));
   }
 };

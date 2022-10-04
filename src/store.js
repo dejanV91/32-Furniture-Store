@@ -1,5 +1,7 @@
 import { getStorageItem, setStorageItem } from './utils.js';
+// get data from local storage
 let store = getStorageItem('store');
+// set products on local storage
 const setupStore = (products) => {
   store = products.map((product) => {
     const {
