@@ -12,6 +12,7 @@ const setupSearch = (store) => {
         if (name.startsWith(value)) {
           return product;
         }
+
       });
       display(newStore, getElement('.products-container'), true);
       if (newStore.length < 1) {

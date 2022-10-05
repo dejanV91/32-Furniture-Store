@@ -44,6 +44,7 @@ window.addEventListener('DOMContentLoaded', async function () {
       companyDOM.textContent = `by ${company}`;
       priceDOM.textContent = formatPrice(price);
       descDOM.textContent = description;
+      // add colors
       colors.forEach((color) => {
         const span = document.createElement('span');
         span.classList.add('product-color');
@@ -51,7 +52,6 @@ window.addEventListener('DOMContentLoaded', async function () {
         colorsDOM.appendChild(span);
       });
     } else {
-      console.log(response.status, response.statusText);
       centerDOM.innerHTML = `
     <div>
     <h3 class="error">sorry, something went wrong</h3>
