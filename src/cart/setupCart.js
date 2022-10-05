@@ -71,7 +71,6 @@ function displayCartTotal() {
 }
 function displayCartItemsDOM() {
   cart.forEach((cartItem) => {
-    console.log(cartItem);
     addToCartDOM(cartItem);
   });
 }
