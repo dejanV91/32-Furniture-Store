@@ -61,18 +61,17 @@ function displayCartItemCount() {
   }, 0);
   cartItemCountDOM.textContent = amount;
 }
+// display total prices for all products price * amount
 function displayCartTotal() {
+  // list cross all list of products and sum in total variable (product.price * product.amount)
   let total = cart.reduce((total, cartItem) => {
-    console.log("FIRST: " + total);
-    console.log(cartItem);
     return (total += cartItem.price * cartItem.amount);
   }, 0);
-  console.log(cart); ////////////////////////////////////////////////////////////////////////////////reduce method and display cart total
-  console.log(total);
   cartTotalDOM.textContent = `Total : ${formatPrice(total)} `;
 }
 function displayCartItemsDOM() {
   cart.forEach((cartItem) => {
+    console.log(cartItem);
     addToCartDOM(cartItem);
   });
 }
