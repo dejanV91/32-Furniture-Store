@@ -19,11 +19,8 @@ const singleProductUrl =
   }
 
   const getElement = (selection) => {
-    try {
-        return document.querySelector(selection)
-    } catch (error) {
-        console.log("element didn't find" + error);
-    }
+    let element = document.querySelector(selection)
+    return element;
   }
 
 

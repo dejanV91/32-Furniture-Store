@@ -1,6 +1,7 @@
+import { display } from "./src/display.js";
 import { fetchProducts } from "./src/fetchProducts.js";
 import { setupStore, store } from "./src/setupStore.js";
-import { getElement } from "./utils.js"
+import { getElement } from "./src/utils.js"
 
 const featuredDiv = getElement(".featured-center");
 
@@ -9,7 +10,7 @@ const init = async () => {
   if (products) {
     setupStore(products);
     const featured = store.filter((product) => product.featured === true)
-    display()
+    display(featuredDiv,featured)
   }
 }
 
