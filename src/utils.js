@@ -23,9 +23,18 @@ const singleProductUrl =
     return element;
   }
 
+  const formattedPrice = (price) => {
+    var formatted = new Intl.NumberFormat('en-US', {
+        style: "currency",
+        currency: "USD",
+    });
+    return formatted.format(price);
+  }
+
 
 export {allProductsUrl,
     singleProductUrl,
     getStorageItems,
     setStorageItems,
-    getElement}
+    getElement,
+    formattedPrice}
