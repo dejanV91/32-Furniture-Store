@@ -37,6 +37,10 @@ const addToCart = (id) => {
     
 }
 
+function removeItem (id) {
+    cart = cart.filter((cartItem) => cartItem.id !==id)
+}
+
 const increaseAmount = (id) => {
     let newAmount;
     cart = cart.map((item) => {
@@ -66,13 +70,26 @@ function displayCartTotal(){
 function setupCartFunctionality(){
     cartItemsDOM.addEventListener("click", (e) => {
         const element = e.target;
-        const parent = e.target.parentNode.parentNode;
+        const parent = e.target.parentNode;
         const id = e.target.dataset.id;
         const parentID = e.target.parentNode.parentNode.dataset.id
+
         
-        if (element.classList.contains("cart-item-remove-btn")){
-            removeItem()
-        }
+
+        // if (element.classList.contains("cart-item-remove-btn")){
+        //     removeItem(parentID);
+        //     // remove item DOM
+        //     parent.remove();
+        // }
+
+        // if (element.parentNode.classList.contains("cart-item-increase-btn")){
+
+        //     const newAmountparent = increaseAmount(parent.parentNode.dataset.id);
+
+        //     console.log(element);
+        // }
+
+        setStorageItems("cart", cart);
     });
 }
 
