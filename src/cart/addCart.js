@@ -53,6 +53,18 @@ const increaseAmount = (id) => {
     return newAmount
 }
 
+const decreaseAmount = (id) => {
+    let newAmount;
+    cart = cart.map((item) => {
+        if (item.id === id) {
+            newAmount = item.amount - 1;
+            item = {...item, amount: newAmount}
+        }
+        return item
+    });
+    return newAmount
+}
+
 function displayCartItemsCount(){
     const amount = cart.reduce((total, cartItem) => {
         return (total += cartItem.amount)
@@ -70,23 +82,26 @@ function displayCartTotal(){
 function setupCartFunctionality(){
     cartItemsDOM.addEventListener("click", (e) => {
         const element = e.target;
-        const parent = e.target.parentNode;
+        const parent = e.target.parentElement;
         const id = e.target.dataset.id;
-        const parentID = e.target.parentNode.parentNode.dataset.id
+        const parentID = e.target.parentElement.dataset.id
 
-        
+        // remove item DOM
+        if (element.classList.contains("cart-item-remove-btn")){
+            removeItem(id);
+            parent.parentNode.remove();
+        }
 
-        // if (element.classList.contains("cart-item-remove-btn")){
-        //     removeItem(parentID);
-        //     // remove item DOM
-        //     parent.remove();
-        // }
+        // increase product on cart
+        if (parent.classList.contains("cart-item-increase-btn")){
+            const newAmount = increaseAmount(parentID);
+            parent.nextElementSibling.textContent = newAmount;
+        }
 
-        // if (element.parentNode.classList.contains("cart-item-increase-btn")){
-
-        //     const newAmountparent = increaseAmount(parent.parentNode.dataset.id);
-
-        //     console.log(element);
+        // decrease product on cart
+        // if (parent.classList.contains("cart-item-increase-btn")){
+        //     const newAmount = increaseAmount(parentID);
+        //     parent.nextElementSibling.textContent = newAmount;
         // }
 
         setStorageItems("cart", cart);
