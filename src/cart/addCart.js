@@ -1,5 +1,5 @@
 import { findProduct } from "../setupStore.js";
-import { getElement, getStorageItems } from "../utils.js";
+import { formattedPrice, getElement, getStorageItems, setStorageItems } from "../utils.js";
 import { addToCartDOM } from "./addToCartDOM.js";
 import { openCart } from "./toggleCart.js";
 
@@ -24,7 +24,14 @@ const addToCart = (id) => {
         newAmount.textContent = amount;
     }
 
+    // display number of products in cart
+    displayCartItemsCount();
 
+    //displa product total price in cart
+    displayCartTotal();
+
+    // set cart on local Storage
+    setStorageItems("cart", cart)
 
     openCart();
     
@@ -42,5 +49,39 @@ const increaseAmount = (id) => {
     return newAmount
 }
 
-export {addToCart,
+function displayCartItemsCount(){
+    const amount = cart.reduce((total, cartItem) => {
+        return (total += cartItem.amount)
+    }, 0);
+    cartItemCountDOM.textContent = amount
+}
+
+function displayCartTotal(){
+    const total = cart.reduce((total, cartItem) => {
+        return (total += cartItem.amount * cartItem.price)
+    },0);
+    cartTotalDOM.textContent = formattedPrice(total);
+}
+
+function setupCartFunctionality(){
+    cartItemsDOM.addEventListener("click", (e) => {
+        const element = e.target;
+        const parent = e.target.parentNode.parentNode;
+        const id = e.target.dataset.id;
+        const parentID = e.target.parentNode.parentNode.dataset.id
+        
+        if (element.classList.contains("cart-item-remove-btn")){
+            removeItem()
         }
+    });
+}
+
+setupCartFunctionality();
+
+// const init = () => {
+//     setupCartFunctionality();
+// }
+
+// init();
+
+export {addToCart}
