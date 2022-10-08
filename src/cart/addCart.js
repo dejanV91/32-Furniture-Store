@@ -99,10 +99,19 @@ function setupCartFunctionality(){
         }
 
         // decrease product on cart
-        // if (parent.classList.contains("cart-item-increase-btn")){
-        //     const newAmount = increaseAmount(parentID);
-        //     parent.nextElementSibling.textContent = newAmount;
-        // }
+        if (parent.classList.contains("cart-item-decrease-btn")){
+           const newAmount = decreaseAmount(parentID);
+           if (newAmount === 0) {
+                parent.parentNode.parentNode.remove()
+                removeItem(parentID)
+           }else{
+                parent.previousElementSibling.textContent = newAmount
+           }
+        }
+
+        displayCartItemsCount();
+
+        displayCartTotal()
 
         setStorageItems("cart", cart);
     });
