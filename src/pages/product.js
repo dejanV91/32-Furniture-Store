@@ -1,7 +1,7 @@
 import "../cart/addCart.js";
 import "../cart/toggleCart.js";
-import { fetchProducts } from "../fetchProducts.js";
 import "../toggleSidebar.js";
+import { addToCart } from "../cart/addCart.js";
 import { formattedPrice, getElement, singleProductUrl } from "../utils.js";
 
 const loading = getElement(".page-loading");
@@ -15,6 +15,7 @@ const colorsDOM = getElement('.single-product-colors');
 const descDOM = getElement('.single-product-desc');
 const cartBtn = getElement('.addToCartBtn');
 
+let productID;
 
 window.addEventListener("DOMContentLoaded", async () => {
     const urlSearchURL = window.location.search;
@@ -24,6 +25,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         if (product.status >= 200 && product.status <= 299 ) {
             const item = await product.json();
             const {id, fields} = item;
+            productID = id;
             const {company,colors, description, image:img, name, price} = fields
             const image = img[0].thumbnails.large.url;
 
@@ -53,3 +55,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         console.log(error);
     }
 })
+
+cartBtn.addEventListener("click", () => {
+    addToCart(productID);
+});
