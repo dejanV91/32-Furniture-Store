@@ -132,4 +132,4 @@ const init = () => {
 
 init();
 
-export {addToCart, cart}
+export {addToCart, init}

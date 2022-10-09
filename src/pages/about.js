@@ -1,9 +1,2 @@
-import {displayCartItemsDOM,
-        displayCartItemsCount,
-        displayCartItemsDOM,
-        setupCartFunctionality} from "../cart/addCart.js"
-
-displayCartItemsCount();
-displayCartTotal();
-displayCartItemsDOM();
-setupCartFunctionality();
+import "../cart/addCart.js"
+import "../cart/toggleCart.js"
