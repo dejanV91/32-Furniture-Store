@@ -79,6 +79,12 @@ function displayCartTotal(){
     cartTotalDOM.textContent = formattedPrice(total);
 }
 
+function displayCartItemsDOM(){
+    cart.forEach((cartItem) => {
+        addToCartDOM(cartItem);
+    });
+};
+
 function setupCartFunctionality(){
     cartItemsDOM.addEventListener("click", (e) => {
         const element = e.target;
@@ -117,12 +123,13 @@ function setupCartFunctionality(){
     });
 }
 
-setupCartFunctionality();
+const init = () => {
+    displayCartItemsCount();
+    displayCartTotal();
+    displayCartItemsDOM();
+    setupCartFunctionality();
+}
 
-// const init = () => {
-//     setupCartFunctionality();
-// }
+init();
 
-// init();
-
-export {addToCart}
+export {addToCart, cart}
