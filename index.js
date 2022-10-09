@@ -2,6 +2,7 @@ import { display } from "./src/display.js";
 import { fetchProducts } from "./src/fetchProducts.js";
 import { setupStore, store } from "./src/setupStore.js";
 import { getElement } from "./src/utils.js"
+import "./src/toggleSidebar.js"
 
 const featuredDiv = getElement(".featured-center");
 
