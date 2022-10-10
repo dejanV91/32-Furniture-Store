@@ -19,7 +19,7 @@ inputForm.addEventListener("keyup", () => {
         }
     });
 
-    display(productsContainer, products);
+    display(productsContainer, products, true);
 
     if (products.length < 1) {
         productsContainer.innerHTML = `<h3 class="filter-error">

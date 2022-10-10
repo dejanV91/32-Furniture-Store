@@ -1,7 +1,7 @@
 import { addToCart } from "./cart/addCart.js";
 import { formattedPrice } from "./utils.js";
 
-const display = (element, items) => {
+const display = (element, items, filter) => {
     const products = items.map((item) => {
         const {id, image, name, price} = item;
         return `<article class="product">
@@ -26,6 +26,9 @@ const display = (element, items) => {
     .join(" ");
     element.innerHTML = products;
 
+    if (filter) {
+        return;
+    }
 
     element.addEventListener("click", (e) => {
         let cartButton = e.target.parentNode;
