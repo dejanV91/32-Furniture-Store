@@ -6,7 +6,7 @@ const companiesList = getElement(".companies")
 const productsContainer = getElement(".products-container");
 
 const setupCompanies = (store) => {
-    let companies = ["all", ... new Set(store.map((item) => item.company))];
+    let companies = ["all", ...new Set(store.map((item) => item.company))];
     
     // add list companies DOM
     companiesList.innerHTML = companies.map((item) => {
