@@ -1,5 +1,4 @@
 import { display } from "../display.js";
-import { store } from "../setupStore.js";
 import { getElement } from "../utils.js";
 
 const companiesList = getElement(".companies")
