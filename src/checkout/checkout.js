@@ -10,9 +10,9 @@ async function getStripeSession () {
 		body: buildQuery({
             payment_method_types: ['card'],
             mode: 'payment',
-            success_url: 'http://my-website.com/success/',
-            cancel_url: 'http://my-website.com/checkout/',
-            line_items
+            // success_url: 'http://my-website.com/success/',
+            // cancel_url: 'http://my-website.com/checkout/',
+            
 		})
 	});
 
