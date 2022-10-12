@@ -19,4 +19,4 @@ const findProduct = (id) => {
 
 export {store,
         setupStore,
-        findProduct,}
+        findProduct}

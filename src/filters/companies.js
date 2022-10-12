@@ -20,7 +20,6 @@ const setupCompanies = (store) => {
                 return product
             }
         });
-        
         if (productsByCompany.length < 1) {
             display(productsContainer, store, true);
         }else{
